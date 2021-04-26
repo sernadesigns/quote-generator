@@ -10,7 +10,12 @@
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
-	<div class="quote-container" id="quote-container">
+	<!-- Start Buttons -->
+	<div class="button-container">
+		<button id="fetch-quote">Fetch Single Quote</button>
+		<button id="fetch-quotes">Fetch Array of Quotes</button>
+	</div>
+	<div class="quote-container" id="quote-container" hidden>
 		<!-- Quote -->
 		<div class="quote-text">
 			<i class="fas fa-quote-left"></i>
@@ -20,7 +25,7 @@
 		<div class="quote-author">
 			<span id="author"></span>
 		</div>
-		<!-- Buttons -->
+		<!-- Quote Buttons -->
 		<div class="button-container">
 			<button class="twitter-button" id="twitter" title="Tweet This!">
 				<i class="fab fa-twitter"></i>
@@ -28,8 +33,10 @@
 			<button id="new-quote">New Quote</button>
 		</div>
 	</div>
+	<!-- Error Message -->
+	<div class="error-message" id="error-message" hidden>Oops. Something is wrong. Try refreshing the page.</div>
 	<!-- Loader -->
-	<div class="loader" id="loader"></div>
+	<div class="loader" id="loader" hidden></div>
 	<!-- Script -->
 	<script src="quotes.js"></script>
 	<script src="script.js"></script>
